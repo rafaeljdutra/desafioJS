@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        input,button {
+            display: block;
+            margin: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        button {
+            background-color: aqua;
+            border-radius: 5px;
+            border:1px solid;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Digite "alfafa", "cabra" ou "lobo" para atravessar o rio sem que o lobo fique ao lado da cabra e a cabra fique ao lado da alfafa.</p>
+
+    <input type="text" id="cabra">
+    <input type="text" id="lobo">
+    <input type="text" id="alfafa">
+
+    <button onclick="atravessar()">
+        Atravessar Rio
+    </button>
+
+    <div id="resultado"></div>
+
+</body>
+<script>
+    function atravessar(){
+        
+        var cabra = (document.getElementById("cabra").value);
+        var lobo = (document.getElementById("lobo").value);
+        var alfafa = (document.getElementById("alfafa").value);
+
+        var media = cabra + lobo + alfafa;
+
+        document.getElementById("resultado").innerHTML = "Resultado:" + media;
+
+        console.log(cabra + lobo + cabra)
+    }
+</script>
+</html>
